@@ -255,4 +255,3 @@ observer.unobserve(entry.target); } }); }, { threshold: 0.1 } );
 document.querySelectorAll(".event-card").forEach(function(card) {
 observer.observe(card);
 });
-
