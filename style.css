@@ -130,3 +130,64 @@ animation: bounce 2s infinite ;
 50% { transform: translateY(8px);}
 }
 
+
+/*styling of section header  */
+
+.section-header{
+text-align: center;
+padding: 60px 20px 10px;
+}
+
+.section-label {
+display: inline-block;
+font-family: 'Cinzel' , serif ;
+font-size: 0.75rem ;
+letter-spacing: 4px;
+text-transform: uppercase;
+color: var(--saffron);
+border-top: 1px solid var(--gold);
+border-bottom:  1px solid var(--gold);
+padding: 6PX 20PX;
+margin-bottom: 10px;
+}
+
+.section-title {
+font-family: 'Cinzel' , serif;
+font-size: clamp(1.3rem , 3vw , 2rem);
+color: var(--maroon);
+margin-bottom: 4px;
+}
+
+
+/* styling of event/discovery cards  */
+
+#events-container {
+max-width: 1100px;
+margin: 0 auto;
+padding: 0 20px 80px;
+}
+
+.event-card {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 0;
+margin: 40px 0;
+border-radius: 4px;
+overflow: hidden;
+box-shadow: 0 8px 40px rgba(92,10,10,0.13);
+border: 1px solid var(--border-gold);
+background: var(--card-bg);
+
+opacity: 0;
+transform: translateY(30px);
+transition: opacity 0.6s ease , transform 0.6s ease;
+}
+
+.event-card.visible{
+opacity: 1;
+transform: translateY(0);
+}
+
+/* alternate switching of image side  */
+.event-card.flip-image{ direction: rtl;}
+.event-card.flip-image > * { direction: ltr;}
