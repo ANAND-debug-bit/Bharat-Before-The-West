@@ -14,11 +14,13 @@
 <p>
   It's very easy just open the website and you will see website headpage with a background image of Konark Sun Temple
   <br>
-  ![image](https://www.image2url.com/r2/default/images/1781111019401-cb6f7b49-588d-414c-9d82-f83d0e9bb4ea.png)
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b87b3cf8-0e8f-41be-9f5c-8c579ce4a42e" />
+
 <br>
   scroll down the website and experience all the event cards , different discoveries , different categories and at the end of the website with a disclaimer and source credits
   <br>
-  ![image](https://www.image2url.com/r2/default/images/1781111164775-2ca1c20b-add3-437b-8282-913c489d0e82.png)
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/03eacb51-70d4-43cd-9de4-b7f0ade6afee" />
+
 
 </p>
 <hr>
@@ -34,13 +36,13 @@
 <h2>Some cool features</h2>
 
 <ul>
-  <li> Both Indian and western claims stated per event card</li>
-  <li> Background image of Konark Sun Temple at home page to represent an Indian styled website theme</li>
-  <li> Classic Indian theme represented through text styling and events represetation<li>
-  <li> Time gap between Discovery by an Indian and a western claim</li>
+  <li> Both Indian and western claims stated per event card.</li>
+  <li> Background image of Konark Sun Temple at home page to represent an Indian styled website theme.</li>
+  <li> Classic Indian theme represented through text styling and events represetation.</li>
+  <li> Time gap between Discovery by an Indian and a western claim.</li>
   <li>Separate pages or cards for each field — medicine, astronomy etc.</li>
-  <li> Sources and disclaimer (to not hurt anyone's feelings) at the end of the website </li>
-  <li> Smooth fade in transition during scroll down in the site </li>
+  <li> Sources and disclaimer (to not hurt anyone's feelings) at the end of the website .</li>
+  <li> Smooth fade in transition during scroll down in the site. </li>
 </ul>
 
 <hr>
