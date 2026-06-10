@@ -1,0 +1,131 @@
+:root {
+--maroon:       #5c0a0a;
+--dark-maroon:  #3a0404;
+--saffron:      #E07b2a;
+--gold:         #C9a227;
+--pale-gold:    #F0d87a;
+--ivory:        #Fdf6e3;
+--cream:        #f7edd0;
+--text-dark:    #2b1200;
+--text-mid:     #5c3a1e;
+--text-light:   #8b5e3c;
+--gap-red:      #c0392b;
+--gap-orange:   #d35400;
+--gap-green:    #1e7b45;
+--gap-blue:     #1a5276;
+--card-bg:      #fffdf5;
+--border-gold:  #c9a22755;
+}
+
+*, *::before, *::after {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+font-family: 'lora' , Georgia , serif;
+background-color: var(--ivory);
+color: var(--text-dark);
+}
+/* Bharat Before The West title  styling */
+
+.hero{
+position: relative;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 60px 20px;
+background-image: url("https://media.assettype.com/homegrown%2Fimport%2Ffacebook-10334-Konark-Sun-Temple-Inside-the-hostoryhub11111.jpg?w=480&auto=format%2Ccompress");
+background-size: cover;
+background-position: center;
+background-color: var(--dark-maroon); 
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( 
+        to bottom ,
+     rgba(42 , 4 ,4 ,0.78) 0% ,
+     rgba(42 ,4 ,4 , 0.65)60%   ,
+     rgba(42 , 4 , 4 , 0.85)100%
+                 );
+z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 860px;
+}
+
+.hero-eyebrow {
+font-family: 'Cinzel' , serif;
+font-size: 0.85rem;
+letter-spacing: 3px;
+text-transform: uppercase;
+color: var(--pale-gold);
+margin-bottom: 18px;
+}
+
+.hero-title {
+font-family: 'Cinzel Decorative' , serif ;
+font-size: clamp(2.4rem , 6vw , 5rem);
+color: var(--pale-gold);
+line-height: 1.15;
+text-shadow: 0 4px 24px rgba(0,0,0,0.5);
+margin-bottom: 16px;
+}
+
+.hero-subtitle {
+font-family: 'Lora' , serif;
+font-style: italic;
+font-size: clamp(1rem , 2.5vw , 1.4rem);
+color: var(--cream);
+margin-bottom: 28px;
+opacity: 0.9;
+}
+
+.hero-divider {
+font-size: 1.6rem;
+color: var(--gold);
+margin-bottom: 24px;
+letter-spacing: 8px;
+}
+
+.hero-note{
+font-size: clamp(0.9rem , 1.8vw , 1.05rem);
+color: var(--cream);
+max-width: 680px;
+margin: 0 auto;
+opacity: 0.85;
+border-left: 3px solid var(--saffron);
+padding-left: 20px;
+text-align: left;
+line-height: 1.8;
+}
+
+.scroll-hint{
+position: relative;
+z-index: 1;
+margin-top: 48px;
+font-family: 'Cinzel' , serif ;
+font-size: 0.8rem;
+letter-spacing: 2px;
+color: var(--pale-gold);
+opacity: 0.6;
+animation: bounce 2s infinite ;
+}
+
+@keyframes bounce {
+0% , 100% { transform: translateY(0);}
+50% { transform: translateY(8px);}
+}
