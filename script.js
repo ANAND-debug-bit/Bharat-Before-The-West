@@ -190,3 +190,69 @@ const discoveries = [
 },
 ];
 
+// site functioning part 
+
+const container = document.getElementById("events-container");
+const grouped = {};
+discoveries.forEach(function(d) {
+if (!grouped[d.category]) {
+grouped[d.category] = []; }
+grouped[d.category].push(d);
+});
+let cardIndex = 0;
+Object.keys(grouped).forEach(function(category) {
+const sectionDiv = document.createElement("div");
+sectionDiv.className = "section-header";
+sectionDiv.innerHTML = `
+<div class="section-label">Chapter</div>
+<h2 class="section-title">${category}</h2>
+`;
+container.appendChild(sectionDiv);
+grouped[category].forEach(function(event) {
+const card = document.createElement("div");
+if (cardIndex % 2 !== 0) {
+card.className = "event-card flip-image";
+} else {
+card.className = "event-card";
+}
+cardIndex++;
+card.innerHTML = `
+<div class="card-image-wrap">
+<img src="${event.image}" alt="${event.title}" onerror="this.style.display='none'" />
+<div class="card-image-overlay"></div>
+</div>
+<div class="card-info">
+
+<p class="card-category-tag">${event.category}</p>
+<h3 class="card-title">${event.title}</h3>
+<p class="card-source">${event.source}</p>
+<div class="card-rows">
+<div class="card-row">
+<span class="row-label">Indian Origin</span>
+<span class="row-value indian">${event.indianOrigin}</span>
+</div>
+<div class="card-row">
+
+<span class="row-label">Western Claim</span>
+<span class="row-value">${event.westernClaim}</span>
+</div>
+</div>
+<span class="gap-badge ${event.gapColor}">${event.gap}</span>
+</div>
+`;
+container.appendChild(card);
+
+});
+});
+
+// scroll animation 
+
+const observer = new IntersectionObserver(
+(entries) => {
+entries.forEach(function(entry) { if (entry.isIntersecting) {
+entry.target.classList.add("visible");
+observer.unobserve(entry.target); } }); }, { threshold: 0.1 } );
+document.querySelectorAll(".event-card").forEach(function(card) {
+observer.observe(card);
+});
+
