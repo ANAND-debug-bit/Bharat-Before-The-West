@@ -200,6 +200,14 @@ if (!grouped[d.category]) {
 grouped[d.category] = []; }
 grouped[d.category].push(d);
 });
+
+// scroll animation — set up observer BEFORE building cards
+const observer = new IntersectionObserver(
+(entries) => {
+entries.forEach(function(entry) { if (entry.isIntersecting) {
+entry.target.classList.add("visible");
+observer.unobserve(entry.target); } }); }, { threshold: 0.1 } );
+
 let cardIndex = 0;
 Object.keys(grouped).forEach(function(category) {
 const sectionDiv = document.createElement("div");
@@ -243,17 +251,7 @@ ${event.worldCredit ? `<a class="world-credit-btn" href="${event.worldCredit}" t
 </div>
 `;
 container.appendChild(card);
+observer.observe(card); // observe right after appending
 
 });
-});
-
-// scroll animation 
-
-const observer = new IntersectionObserver(
-(entries) => {
-entries.forEach(function(entry) { if (entry.isIntersecting) {
-entry.target.classList.add("visible");
-observer.unobserve(entry.target); } }); }, { threshold: 0.1 } );
-document.querySelectorAll(".event-card").forEach(function(card) {
-observer.observe(card);
 });
