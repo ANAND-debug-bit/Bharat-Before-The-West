@@ -8,8 +8,8 @@ const discoveries = [
     westernClaim: "Modern surgery is typically traced back to Europe in the 16th–17th century CE.",
     gap: "~2,000 years earlier",
     gapColor: "red",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKQinnkbv4QiVcYU2DxHSJUTHddH-QNJRxmA&s" 
-    world credit: "https://timesofindia.indiatimes.com/science/scotland-honours-2500-year-old-surgical-pioneer-sage-sushruta-with-bronze-statue-in-edinburgh/articleshow/131937294.cms"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKQinnkbv4QiVcYU2DxHSJUTHddH-QNJRxmA&s",
+    worldCredit: "https://timesofindia.indiatimes.com/science/scotland-honours-2500-year-old-surgical-pioneer-sage-sushruta-with-bronze-statue-in-edinburgh/articleshow/131937294.cms"
 },
 
 {   category: "Science & Medicine",
@@ -239,6 +239,7 @@ card.innerHTML = `
 </div>
 </div>
 <span class="gap-badge ${event.gapColor}">${event.gap}</span>
+${event.worldCredit ? `<a class="world-credit-btn" href="${event.worldCredit}" target="_blank" rel="noopener noreferrer">🌍 World Credit</a>` : ''}
 </div>
 `;
 container.appendChild(card);
