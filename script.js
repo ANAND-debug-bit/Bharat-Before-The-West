@@ -9,6 +9,7 @@ const discoveries = [
     gap: "~2,000 years earlier",
     gapColor: "red",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKQinnkbv4QiVcYU2DxHSJUTHddH-QNJRxmA&s" 
+    world credit: "https://timesofindia.indiatimes.com/science/scotland-honours-2500-year-old-surgical-pioneer-sage-sushruta-with-bronze-statue-in-edinburgh/articleshow/131937294.cms"
 },
 
 {   category: "Science & Medicine",
